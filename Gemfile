@@ -48,3 +48,4 @@ end
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
+gem 'seed_dump'
