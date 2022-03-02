@@ -1,0 +1,2 @@
+class EquipmentSet < ApplicationRecord
+end
