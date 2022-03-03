@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NDYyNzY0OTR9.hB3dOIq9TqU2NQuO6yRAUmGaVoNiJILOxm_zTQIzqQE
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDYzNDk0NjB9.Xjxj_rzvK6irjic8Jn3pDnOqSY_9UYsMQ5yQ0nyOSIM
 
 ### Users create (signup)
 POST http://localhost:3000/users

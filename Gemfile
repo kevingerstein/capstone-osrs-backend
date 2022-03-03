@@ -49,3 +49,4 @@ end
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 gem 'seed_dump'
+gem 'active_model_serializers', '~> 0.10.0'

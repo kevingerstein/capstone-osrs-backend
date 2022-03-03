@@ -1,0 +1,77 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDYzNDk0NjB9.Xjxj_rzvK6irjic8Jn3pDnOqSY_9UYsMQ5yQ0nyOSIM
+
+@domain = http://localhost:3000
+
+
+###Index equipment sets
+GET {{ domain }}/equipment-sets
+Authorization: Bearer {{ jwt }}
+
+###Create equipment set
+POST {{ domain }}/equipment-sets
+Authorization: Bearer {{ jwt }}
+Content-Type: application/json
+
+{
+  "name": "Sword Dragon Set",
+  "oldschooljs_monster_id": 12915,
+  "items": [
+    {
+      "oldschooljs_item_id": 4151,
+      "slot": "2h"
+    },
+     {
+      "oldschooljs_item_id": 2,
+      "slot": "helm"
+    },
+     {
+      "oldschooljs_item_id": 3,
+      "slot": "chest"
+    },
+     {
+      "oldschooljs_item_id": 4,
+      "slot": "legs"
+    },
+    {
+      "oldschooljs_item_id": 5,
+      "slot": "ring"
+    }
+  ]
+}
+
+###Show equipment set
+GET {{ domain }}/equipment-sets/5
+Authorization: Bearer {{ jwt }}
+
+###Update equipment set
+PATCH {{ domain }}/equipment-sets/5
+Authorization: Bearer {{ jwt }}
+Content-Type: application/json
+
+{
+  "name": "Sword Dragon Melee Set",
+  "oldschooljs_monster_id": 777,
+  "equipment_set_id": 5,
+  "items": [
+     {
+      "oldschooljs_item_id": 2,
+      "slot": "helm"
+    },
+     {
+      "oldschooljs_item_id": 3,
+      "slot": "chest"
+    },
+     {
+      "oldschooljs_item_id": 4,
+      "slot": "legs"
+    },
+    {
+      "oldschooljs_item_id": 5,
+      "slot": "ring"
+    }
+  ]
+}
+
+###Delete equipment set
+DELETE {{ domain }}/equipment-sets/6
+Authorization: Bearer {{ jwt }}
