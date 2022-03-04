@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDYzNDk0NjB9.Xjxj_rzvK6irjic8Jn3pDnOqSY_9UYsMQ5yQ0nyOSIM
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDY0NTE0NzF9.cpOdjPgnSOAgbqIQUdWxb6-rEti2n1dvuZzcNtjM5QU
 
 @domain = http://localhost:3000
 
@@ -13,7 +13,7 @@ Authorization: Bearer {{ jwt }}
 Content-Type: application/json
 
 {
-  "name": "Sword Dragon Set",
+  "name": "Revenant Ranged Set",
   "oldschooljs_monster_id": 12915,
   "items": [
     {
@@ -22,15 +22,35 @@ Content-Type: application/json
     },
      {
       "oldschooljs_item_id": 2,
-      "slot": "helm"
+      "slot": "head"
     },
      {
       "oldschooljs_item_id": 3,
-      "slot": "chest"
+      "slot": "body"
     },
      {
       "oldschooljs_item_id": 4,
       "slot": "legs"
+    },
+     {
+      "oldschooljs_item_id": 4,
+      "slot": "feet"
+    },
+     {
+      "oldschooljs_item_id": 4,
+      "slot": "hands"
+    },
+     {
+      "oldschooljs_item_id": 4,
+      "slot": "cape"
+    },
+     {
+      "oldschooljs_item_id": 4,
+      "slot": "ammo"
+    },
+     {
+      "oldschooljs_item_id": 4,
+      "slot": "neck"
     },
     {
       "oldschooljs_item_id": 5,
@@ -49,9 +69,9 @@ Authorization: Bearer {{ jwt }}
 Content-Type: application/json
 
 {
-  "name": "Sword Dragon Melee Set",
+  "name": "Magic Dragon Set",
   "oldschooljs_monster_id": 777,
-  "equipment_set_id": 5,
+  "equipment_set_id": 7,
   "items": [
      {
       "oldschooljs_item_id": 2,
