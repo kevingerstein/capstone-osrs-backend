@@ -36,16 +36,18 @@ class EquipmentSetsController < ApplicationController
 
   def update
     #Updates set values
-    set = EquipmentSet.find(params[:equipment_set_id])
+    set = EquipmentSet.find(params[:id])
     set.name = params[:name] || set.name
     set.oldschooljs_monster_id = params[:oldschooljs_monster_id] || set.oldschooljs_monster_id
     
     if set.save
     #Deletes old items and adds new items
+    #check if item is the same as old, if its not, update it
       EquipmentSetItem.where(equipment_set_id: set.id).destroy_all
       items = params[:items]
       items.each do |item|
         EquipmentSetItem.create(
+
           oldschooljs_item_id: item[:oldschooljs_item_id],
           slot: item[:slot],
           equipment_set_id: set.id
@@ -61,7 +63,6 @@ class EquipmentSetsController < ApplicationController
 
   def destroy
     set_id = params[:id]
-    EquipmentSetItem.where(equipment_set_id: set_id).destroy_all
     EquipmentSet.find(set_id).destroy
 
     render json: {message: "The equipment set has been destroyed."}

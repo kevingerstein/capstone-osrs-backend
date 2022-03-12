@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user, except: [:create]
+
   def create
     user = User.new(
       display_name: params[:display_name],
@@ -16,15 +17,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    render json: User.find(current_user.id)
+    render json: current_user
   end
 
   def update
-    user = User.find(current_user.id)
+    user = current_user
     user.display_name = params[:display_name] || user.display_name
     user.email = params[:email] || user.email
-    user.password = params[:password] || user.password
-    user.password_confirmation = params[:password_confirmation] || user.password_confirmation
+    if params[:password] && params[:password_confirmation]
+      user.password = params[:password] || user.password
+      user.password_confirmation = params[:password_confirmation] || user.password_confirmation
+    end
     user.profile_picture = params[:profile_picture] || user.profile_picture
     if user.save
       render json: user

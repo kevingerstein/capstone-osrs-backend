@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDY0NTE0NzF9.cpOdjPgnSOAgbqIQUdWxb6-rEti2n1dvuZzcNtjM5QU
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDcwNjAxMDN9.TWEMdWn6-e1tl4DBM1AQkNESM5zLMVo2i3fQ1WEkTKA
 
 @domain = http://localhost:3000
 
@@ -13,7 +13,7 @@ Authorization: Bearer {{ jwt }}
 Content-Type: application/json
 
 {
-  "name": "Revenant Ranged Set",
+  "name": "Revenant fdasfd Set",
   "oldschooljs_monster_id": 12915,
   "items": [
     {
@@ -60,18 +60,17 @@ Content-Type: application/json
 }
 
 ###Show equipment set
-GET {{ domain }}/equipment-sets/5
+GET {{ domain }}/equipment-sets/4
 Authorization: Bearer {{ jwt }}
 
 ###Update equipment set
-PATCH {{ domain }}/equipment-sets/5
+PATCH {{ domain }}/equipment-sets/4
 Authorization: Bearer {{ jwt }}
 Content-Type: application/json
 
 {
-  "name": "Magic Dragon Set",
+  "name": "Magic poopoo Set",
   "oldschooljs_monster_id": 777,
-  "equipment_set_id": 7,
   "items": [
      {
       "oldschooljs_item_id": 2,
@@ -93,5 +92,5 @@ Content-Type: application/json
 }
 
 ###Delete equipment set
-DELETE {{ domain }}/equipment-sets/6
+DELETE {{ domain }}/equipment-sets/52
 Authorization: Bearer {{ jwt }}

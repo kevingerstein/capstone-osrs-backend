@@ -1,12 +1,12 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDYzNDk0NjB9.Xjxj_rzvK6irjic8Jn3pDnOqSY_9UYsMQ5yQ0nyOSIM
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDcwNjAxMDN9.TWEMdWn6-e1tl4DBM1AQkNESM5zLMVo2i3fQ1WEkTKA
 
 ### Users create (signup)
 POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "display_name": "kevin",
-  "email": "kevin@test.com",
+  "display_name": "brian",
+  "email": "brian@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -21,19 +21,20 @@ Content-Type: application/json
 }
 
 ###Show User
-GET http://localhost:3000/users/3
+GET http://localhost:3000/users/2
 Authorization: Bearer {{ jwt }}
 
 ###Update User
-PATCH http://localhost:3000/users/3
+PATCH http://localhost:3000/users/2
 Authorization: Bearer {{ jwt }}
 Content-Type: application/json
 
 {
-  "email": "kevin-test@test.com",
-  "password_confirmation": "password222"
+  "display_name": "brian",
+  "password": "password",
+  "password_confirmation": "password"
 }
 
 ###Delete User
-DELETE http://localhost:3000/users/3
+DELETE http://localhost:3000/users/2
 Authorization: Bearer {{ jwt }}
