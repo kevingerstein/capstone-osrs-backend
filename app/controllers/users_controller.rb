@@ -37,7 +37,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.destroy(current_user.id)
+    current_user.destroy();
     render json: {message: "User has been deleted."}
   end
 end
